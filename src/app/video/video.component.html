@@ -1,0 +1,37 @@
+<div class="main">
+
+  <div class="title">
+    <h1>Proxy-pattern Example</h1>
+  </div>
+  <div class="videos">
+  <div class="single">
+    <video id="piso-21-min"  (click)="openModal(template , $event)"  (mouseover)="callMin($event)" (mouseleave)="stopMin($event)" width="300" height="150" poster="../../assets/img/piso-21-min.png">
+      <source type="video/mp4" codecs="mp4v.20.240, mp4a.40.2">
+    </video>
+  </div>
+  <div class="single">
+    <video id="no-puedo-min"  (click)="openModal(template , $event)"  (mouseover)="callMin($event)" (mouseleave)="stopMin($event)" width="300" height="150"  poster="../../assets/img/no_puedo_default.png" >
+      <source type="video/mp4" codecs="mp4v.20.240, mp4a.40.2">
+    </video>
+  </div>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Full video</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <video  id="myVideo" controls width="300" height=" 300" #fullvideo>
+      <source type="video/mp4" codecs="mp4v.20.240, mp4a.40.2">
+    </video>
+  </div>
+</ng-template>
+
+
+
+</div>
+
+
